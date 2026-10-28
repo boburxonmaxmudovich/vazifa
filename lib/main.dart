@@ -8,7 +8,8 @@ void main() {
   print(task.isDone);
   print(doneTask.isDone);
   print(doneTask.title);
-
+  print(task);
+  print(doneTask);
   runApp(const MyApp());
 }
 

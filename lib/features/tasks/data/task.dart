@@ -1,4 +1,5 @@
-enum Priority { low, medium, high }
+enum Priority { low('Past'), medium('Normal'), high('Urgent'); final String label; const Priority(this.label); }
+
 
 class Task {
   final String id;
@@ -35,5 +36,9 @@ class Task {
       dueDate: dueDate ?? this.dueDate,
       createdAt: createdAt,
     );
+  }
+  @override
+  String toString() {
+    return 'Task(id: $id, title: $title, isDone: $isDone, priority: $priority)';
   }
 }   // ← klass faqat shu yerda, eng oxirida yopiladi
